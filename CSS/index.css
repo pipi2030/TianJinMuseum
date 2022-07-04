@@ -1,0 +1,132 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /*background-image: url("images/background02.png");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+.subNav {
+    display: none;
+    position: absolute;
+    top: 160px;
+}
+
+a {
+    font-family: Times New Roman;
+    text-decoration: none;
+}
+
+ul,
+li {
+    float: left;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.dropdown:hover .subNav {
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown:hover .subNav li {
+    list-style-type: disc;
+    margin-right: 140px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.dropdown:hover .subNav a {
+    color: #ffffff;
+}
+
+.parent {
+    position: relative;
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.parent a {
+    color: #6d0b0c;
+}
+
+#navBox {
+    display: inline-block;
+    position: absolute;
+    left: 500px;
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    padding: 30px 120px 30px 30px;
+    border-bottom-color: white;
+    float: left;
+}
+
+#logo {
+    margin-left: 20px;
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    padding: 20px 20px 20px 20px;
+}
+
+h1,
+p {
+    color: #6d0b0c;
+    font-family: Times New Roman;
+}
+
+#time {
+    position: absolute;
+    top: 400px;
+    right: 150px;
+    font-weight: bold;
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    padding: 30px;
+}
+
+#time span {
+    margin-right: 20px;
+}
+
+
+/*实现hover动态横线效果*/
+
+.parent:hover:after {
+    opacity: 1;
+    transform: translate(-50%) scaleX(1);
+}
+
+.parent:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 100%;
+    opacity: 0;
+    border-bottom: 2px solid #6d0b0c;
+    transform: translate(-50%) scaleX(0);
+    transition: 0.2s ease-in-out;
+}
+
+#search {
+    position: absolute;
+    top: 55px;
+    right: 30px;
+}
+
+#source {
+    mix-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#home_video {
+    position: fixed;
+    top: 150px;
+    bottom: 40px;
+    /*背景模糊设置*/
+    filter: blur(15px);
+    -webkit-filter: grayscale(30%);
+    *filter: grayscale(100%);
+    min-width: 100%;
+    min-height: 100%;
+}
