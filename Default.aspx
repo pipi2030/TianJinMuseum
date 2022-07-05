@@ -14,10 +14,12 @@
 
     <body>
         <div>
+            <!--首页自动播放的视频-->
+            <!--
             <video id="home_video" autoplay="autoplay" loop="loop" muted="muted">
-        <!--首页自动播放的视频-->
-        <source src="video/home_video02.mp4" type="video/mp4" id="source" />
-      </video>
+                
+                <source src="video/home_video02.mp4" type="video/mp4" id="source" />
+            </video>-->
             <img alt="天津博物馆·天津文博馆" src="images/logo02.png" id="logo" />
             <div id="navBox">
                 <!--菜单栏-->
@@ -25,7 +27,7 @@
                     <li class="dropdown">
                         <div class="parent">
                             <!--主菜单-->
-                            <a href="#">Visit</a>
+                            <a href="#" id = "Visit">Visit</a>
                         </div>
                         <div class="subNav">
                             <ul>
@@ -50,7 +52,7 @@
                     </li>
                     <li class="dropdown">
                         <div class="parent">
-                            <a href="#"> Exhibitions and events</a>
+                            <a href="#" id = "Exhibitions"> Exhibitions and events</a>
                         </div>
                         <div class="subNav">
                             <ul>
