@@ -8,18 +8,16 @@
         <title>天津博物馆英文网站首页</title>
         <link rel="stylesheet" type="text/css" href="CSS/index.css" />
         <link rel="shortcut icon" href="https://s2.loli.net/2022/05/29/xK2EXFVQwRqZyLi.png" type="image/png" />
-        <script src="JS/index.js">
-        </script>
+        
     </head>
 
     <body>
+        <!--首页自动播放的视频-->
         <div>
-            <!--首页自动播放的视频-->
-            <!--
-            <video id="home_video" autoplay="autoplay" loop="loop" muted="muted">
-                
-                <source src="video/home_video02.mp4" type="video/mp4" id="source" />
-            </video>-->
+            <%--<video id="home_video" autoplay="autoplay" loop="loop" muted="muted">
+        
+        <source src="video/home_video02.mp4" type="video/mp4" id="source" />
+      </video>--%>
             <img alt="天津博物馆·天津文博馆" src="images/logo02.png" id="logo" />
             <div id="navBox">
                 <!--菜单栏-->
@@ -27,7 +25,7 @@
                     <li class="dropdown">
                         <div class="parent">
                             <!--主菜单-->
-                            <a href="#" id = "Visit">Visit</a>
+                            <a href="#">Visit</a>
                         </div>
                         <div class="subNav">
                             <ul>
@@ -73,7 +71,7 @@
                     </li>
                     <li class="dropdown">
                         <div class="parent">
-                            <a href="#">Collection</a>
+                            <a href="#" id = "Collection">Collection</a>
                         </div>
                         <div class="subNav">
                             <ul>
@@ -104,7 +102,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="parent" class="dropdown">
+                    <li class="parent dropdown">
                         <a href="#"> Shop</a>
                     </li>
                     <li class="dropdown">
@@ -131,6 +129,15 @@
                 </ul>
                 <img alt="搜索" src="images/research.png" id="search" />
             </div>
+            <%--展示次级页面内容--%>
+    
+            <div id = "CollectionContent">
+                <img src = "images/CollectionSampleImg.png" alt = "Collection" />
+            </div>
+            <div id = "ExhibitionsContent">
+                <img src = "images/ExhibitionSampleImg.png" alt = "Exhibitions"/>
+            </div>
+            
             <!-- 开馆时间 -->
             <!--       
 	<div id="time">
@@ -142,10 +149,43 @@
     	<p>Daily:<span>9.00-11.00</span><span>11.00-14.00</span><br/><span>14.00-16:00</span><span>(Closed on Monday)</span></p>
     </div>
     --></div>
-        <form id="form1" runat="server">
-            <p>
-                &nbsp;</p>
-        </form>
-    </body>
+   <%-- 底部--%>
+   <div id = "bottom">
+       <div id = "bottomLeft">
+           <p id="txtContact">Contact with us</p>
+           <a href = "#"><img src ="images/Information.png" alt="Information" /></a>
+           <a href = "#"><img src ="images/weibo.png" alt = "weibo" /></a>
+           <a href = "#"><img src ="images/weixin.png" alt = "weixin" /></a>
+       </div>      
+       <div id = "bottom_right">
+           <div class = "bottomRight">
+               <img src ="images/telephone.png" alt = "telephone" />
+               <p>022-83883000</p>
+           </div>
+           <div class = "bottomRight">
+                <img src ="images/fax.png" alt = "fax" />
+                <p>022-83883088</p>
+           </div>          
+       </div>
+   </div>
 
+   <script>
+        var Exhibitions = document.getElementById("Exhibitions");
+        var ExhibitionsContent = document.getElementById("ExhibitionsContent");
+        var Collection = document.getElementById("Collection");
+        var CollectionContent = document.getElementById("CollectionContent");
+        Exhibitions.onclick = function () {
+            Collection.className = '';
+            CollectionContent.style.display = 'none';
+            this.className = 'on';
+            ExhibitionsContent.style.display = 'block';
+        }
+        Collection.onclick = function () {
+            Exhibitions.className = '';
+            ExhibitionsContent.style.display = 'none';
+            this.className = 'on';
+            CollectionContent.style.display = 'block';
+        }            
+    </script>
+    </body>
     </html>

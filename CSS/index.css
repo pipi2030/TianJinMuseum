@@ -1,3 +1,5 @@
+*margin:0px;
+*padding:0px;
 body {
     margin: 0px;
     padding: 0px;
@@ -129,4 +131,43 @@ p {
     *filter: grayscale(100%);
     min-width: 100%;
     min-height: 100%;
+}
+#CollectionContent
+{/*在开始状态，设置Collection二级页面不可见*/
+    display:none;
+}
+#bottom
+{
+    background-color :White;   
+}
+#bottom p
+{
+    color:#6d0b0c;
+   
+    
+}
+#txtContact
+{
+    font-size:x-large;
+    font-weight:bold;
+}
+
+#bottomLeft
+{
+    float:left;
+}
+
+.bottomRight p
+{
+    display:inline-block;
+    text-align:center;
+}
+.bottomRight img
+{
+    float:left;
+}
+#bottom_right
+{
+    margin:40px;
+    float:right;
 }
