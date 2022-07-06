@@ -132,10 +132,42 @@
             <%--展示次级页面内容--%>
     
             <div id = "CollectionContent">
-                <img src = "images/CollectionSampleImg.png" alt = "Collection" />
+                <div >
+                    <p id = "TopContent">Collection</p>
+                    <div id  = "BtnMore">
+                        <a href = ""><img src="images/例图-13.png"alt="更多"  /></a>
+                    </div>                  
+                </div>
+                <div id = "line"></div><!--深红色划线-->
+                <div>
+                    <img src="images/例图-12.png" alt="向左滑动" id = "TowardsLeft"/>
+                    <div>
+                        <a href="#" id = "Collection01">
+                            <img src ="images/collection01.png"/>
+                            <div id = "txtCollection01">
+                                <p class = "p1">Jadeite cabbagewith katydids</p><br /><br />
+                                <p class = "p2">Qing dynasty(1644-1911)</p>
+                            </div>                    
+                        </a>   
+                    </div> 
+                    <div>
+                        <a href="#" id = "Collection02">
+                            <img src = "images/collection02.png"/>
+                            <div id = "txtCollection02">
+                                <p class = "p1">Taibao ding(cauldron)<br /><br />
+</p>
+                                <p class = "p2">Western Zhou dynasty
+(1046-771 BC)
+)</p>
+                            </div>                       
+                        </a>
+                    </div>
+                    <a href="#"></a>
+                    <img src="images/例图-11.png" alt="向右滑动" id = "TowardsRight" />
+                </div>
             </div>
             <div id = "ExhibitionsContent">
-                <img src = "images/ExhibitionSampleImg.png" alt = "Exhibitions"/>
+                <%--<img src = "images/ExhibitionSampleImg.png" alt = "Exhibitions"/>--%>
             </div>
             
             <!-- 开馆时间 -->
@@ -168,7 +200,6 @@
            </div>          
        </div>
    </div>
-   <p>皮一下很开心</p>
    <script>
         var Exhibitions = document.getElementById("Exhibitions");
         var ExhibitionsContent = document.getElementById("ExhibitionsContent");
